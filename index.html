@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=UTF-8>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>Crystal Collector</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="text-center">Settlers of Catan attack</h1>
+        <h3 class="text-center">The theif is holding you randsom. Give him what he wants or you'll die.</h3>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!-- Target Score Panel -->
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> Target Score</h3>
+                    </div>
+                    <div class="panel-body target-score"> </div>
+                </div>
+            </div>
+            <!-- Win/Lose Panel -->
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-body"> <h2>Win:<span class="win"> &nbsp&nbsp&nbsp&nbsp</span> Lose: <span class="lose"></span></h2> </div>
+                    </div>
+                </div>
+            </div>
+            <!-- User Score Panel -->
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Score</h3>
+                    </div>
+                    <div class="panel-body myScore"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-lg-12">
+ 				<input type="image" class="img-thumbnail wood" src="assets/images/wood.jpg" />
+ 				<input type="image" class="img-thumbnail bricks" src="assets/images/bricks.jpg" />
+ 				<input type="image" class="img-thumbnail wheat" src="assets/images/wheat.jpg" />
+ 				<input type="image" class="img-thumbnail ores" src="assets/images/ores.jpg" />
+ 				<input type="image" class="img-thumbnail sheeps" src="assets/images/sheep.jpg"/>
+        </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+
+</html>
+
+<!-- sheep, brick, wood, wheat ore -->
