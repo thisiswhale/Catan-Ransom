@@ -5,3 +5,10 @@
 	height: 170px;
 }
 
+.jumbotron{
+ 	height: 600px;
+  width: 100%;
+
+  background-image: url("../images/thief-background.jpg");
+  background-size: cover;
+}

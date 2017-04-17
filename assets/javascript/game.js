@@ -1,9 +1,20 @@
-//initialize variables
+//game audios
+var woodChop = new Audio('assets/images/log-splitting.wav');
+var brickScrape = new Audio('assets/images/brick-scraping.wav');
+var rustling = new Audio('assets/images/bush-rustling.wav');
+var mining = new Audio('assets/images/pickaxe-mining.wav');
+var bah = new Audio('assets/images/sheep-bah.wav');
+var oooh = new Audio('assets/images/oooh.mp3');
+var ahhh =  new Audio('assets/images/ahhh.mp3');
 
+var extraResources = new Audio('assets/images/extraResources.mp3');
+var loser = new Audio('assets/images/kingofLoser.mp3')
+
+//initialize variables
 var computerScore = 0;
 var buttons = [];
 var points = 0;
-var ores, wood, bricks, wheat, sheeps;
+var wood,bricks,wheat,ores,sheeps;
 var userScore = 0;
 var win = 0;
 var lose = 0;
@@ -36,10 +47,12 @@ function pointsGenerator() {
     sheeps = buttons[4];
 }
 
+//lost if user score is higher computer score
 function didIWin(user) {
     if (computerScore < userScore) {
         lose++;
         $(".lose").html(lose);
+        loser.play();
         //Game resets
 		gameReset();
 
@@ -47,7 +60,7 @@ function didIWin(user) {
     else if (computerScore === userScore) {
         win++;
         $(".win").html(win);
-
+    	ahhh.play();
         //Game resets
 		gameReset();
     }
@@ -65,21 +78,25 @@ startTarget();
 pointsGenerator();
 
 $(document).ready(function() {
-
+	extraResources.play();
     //click any button add certain amount of points
     $(document).on("click", "input", function() {
         console.log(this);
         console.log($(this));
         if ($(this).hasClass("ores")) {
+        	mining.play();
             userScore += ores;
-            console.log(userScore);
         } else if ($(this).hasClass("wood")) {
+        	woodChop.play();
             userScore += wood;
         } else if ($(this).hasClass("bricks")) {
+        	brickScrape.play();
             userScore += bricks;
         } else if ($(this).hasClass("wheat")) {
+        	rustling.play();
             userScore += wheat;
         } else if ($(this).hasClass("sheeps")) {
+        	bah.play();
             userScore += sheeps;
         }
         $(".myScore").html(userScore);
