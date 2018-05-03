@@ -56,7 +56,7 @@ function didIWin(user) {
         //Game resets
 		gameReset();
 
-    } 
+    }
     else if (computerScore === userScore) {
         win++;
         $(".win").html(win);
@@ -81,8 +81,6 @@ $(document).ready(function() {
 	extraResources.play();
     //click any button add certain amount of points
     $(document).on("click", "input", function() {
-        console.log(this);
-        console.log($(this));
         if ($(this).hasClass("ores")) {
         	mining.play();
             userScore += ores;
@@ -103,8 +101,3 @@ $(document).ready(function() {
         didIWin();
     });
 });
-
-
-//Add lose/win sound
-//sound buttons
-//win lose spacings
